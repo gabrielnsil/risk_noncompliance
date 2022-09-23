@@ -1,5 +1,9 @@
 # ANÁLISE DE RISCO - DATASET EXPLORATION
 
+ALTER TABLE `analise_risco`.`ids` 
+RENAME TO  `analise_risco`.`id`;
+
+
 # 1) Dados dos mutuários
 
 SELECT *
@@ -196,10 +200,5 @@ INNER JOIN dados_mutuarios as dm
 INNER JOIN emprestimos as emp 
 	ON emp.loan_id = id.loan_id 
 INNER JOIN historicos_banco as hb 
-	ON hb.cb_id = id.cb_id;
-
-
- 
-
-
-
+	ON hb.cb_id = id.cb_id
+#WHERE person_emp_length AND person_age AND person_income IS NOT NULL;
